@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="printf()">
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    function printf() {
+        let number = parseInt(prompt('Enter how many prime number would you like to print:'))
+        
+        let print = document.getElementById('print')
+        
+        if(number == 1) {
+            print.innerHTML = '<p>2</p>'
+        }
+        else if(number == 2) {
+            print.innerHTML = '<p>2</p>'
+            print.innerHTML += '<p>3</p>'
+        }
+        else if(number <= 0){
+            printf()
+        }
+        else {
+            print.innerHTML = '<p>2</p>'
+            print.innerHTML += '<p>3</p>'
+            let time = 3
+            let check = 5
+            
+            while(time <= number) {
+                for(let i = 2; i < check; i++) {
+                    let mod = check % i
+
+                    if(mod == 0) {
+                        check++;
+                        i = 2
+                        continue
+                    }
+                    else {
+                        continue
+                    }
+                }
+                print.innerHTML += '<p>' + check + '</p>'
+                check++
+                time++
+            }
+
+        }
+    }
+</script>
