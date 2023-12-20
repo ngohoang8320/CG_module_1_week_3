@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let check = prompt('Enter a number to check out:')
+
+    let number = [-3, 5, 1, 3, 2, 10]
+
+    let len = number.length
+
+    let i = 0
+
+    for(i; i < len; i++) {
+        if(check == number[i]) {
+            alert('The number ' + check + ' is in the array.')
+            break
+        }
+        else {
+            continue
+        }
+    }
+    
+    if(i == len) {
+        alert('The number ' + check + ' is NOT in the array.')
+    }
+</script>
