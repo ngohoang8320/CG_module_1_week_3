@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the degree</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let degree = parseInt(prompt('Enter the degree:'))
+    while(true) {
+        if(degree < 20) {
+            degree = parseInt(prompt('Pls, increase the degree:'))
+        }
+        else if(degree > 100) {
+            degree = parseInt(prompt('Pls, decrease the degree:'))
+        }
+        else {
+            alert("It's ok.")
+            degree = parseInt(prompt('Wanna try again?'))
+        }
+    }
+</script>

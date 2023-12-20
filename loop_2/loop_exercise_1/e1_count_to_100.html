@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count to 100</title>
+</head>
+<body onload="count()">
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let text=''
+    // let i = 1
+
+    for(let i = 1; i <= 100; i++) {
+        
+        text = '<p>' + i + '</p>'
+            
+        document.getElementById('print').innerHTML += text
+
+        if(i == 99) {
+            alert('Now i= ' + i + '\n' + 'Done!')
+        }
+    }
+
+    /* function count() {
+        setTimeout(function() {
+            text = '<p>' + i + '</p>'
+            
+            document.getElementById('print').innerHTML = text
+
+            if(i == 100) {
+                alert('Done!')
+            }
+                        
+            if(i == 101) {
+                alert('Return?')
+                i = 1
+                count()
+            }
+            i++
+            count()
+        }, 100)        
+    } */
+</script>

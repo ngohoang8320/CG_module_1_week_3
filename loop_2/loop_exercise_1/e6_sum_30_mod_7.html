@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let re_30 = 7*30
+    let sum = 0
+    let get_num = 7
+
+    while(get_num <= re_30) {
+        
+        sum += get_num
+        get_num += 7
+    }
+
+    document.getElementById('print').innerHTML = '<p>' + sum + '</p>'
+</script>

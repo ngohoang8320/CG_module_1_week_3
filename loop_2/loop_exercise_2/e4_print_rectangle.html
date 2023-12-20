@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let a = parseInt(prompt('Enter a:'))
+    let b = parseInt(prompt('Enter b:'))
+    let print = ''
+
+    for(let height = 1; height <= b; height++) {
+        if (height == 1 || height == b) {
+            for(let width = 1; width <= a; width++) {
+                print += '<span>*</span>'
+            }
+        }
+        else {
+            print += '<span>*</span>'
+            for(let blank = 2; blank < a; blank++) {
+                print += '<span>&nbsp&nbsp</span>'
+            }
+            print += '<span>*</span>'
+        }
+        print += '<br>'
+    }
+    document.getElementById('print').innerHTML = print
+</script>

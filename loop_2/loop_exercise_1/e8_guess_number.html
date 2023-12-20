@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="guess()">Start</button>
+</body>
+</html>
+
+<script>
+    function guess() {
+        let range = parseInt(prompt('What range would you like to guess: '))
+        let rand_num = Math.floor(Math.random() * range)
+
+        console.log(rand_num)
+
+        let count = 1
+
+        while(count <= 3) {
+            let number = parseInt(prompt('Enter the number you choose:'))
+
+            if(number == rand_num){
+                document.write('Congratulation!')
+                break
+            }
+            else if(number < rand_num) {
+                alert('Your number is less than my.')
+                count++
+                continue
+            }
+            else {
+                alert('Your number greater than my.')
+                count++
+                continue
+            }            
+        }
+
+        if(count > 3){
+            document.write("You have no more chance to guess. Let's start a new game.")
+        }
+        
+    }
+
+</script>

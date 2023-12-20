@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let i = 1
+    let fib_1 = 0
+    let fib_2 = 1
+    let res_tem_1 = 1
+    let res_tem_2 = 2
+    let temp = 0
+
+    let res_f = 0
+    let mod = 0
+
+    while(true) {
+
+        res_f = res_tem_1 + res_tem_2
+        mod = res_f % 5
+
+        if(mod == 0) {
+            document.getElementById('print').innerHTML += '<p>' + res_f + '</p>'
+            break
+        }        
+
+        temp = res_tem_2
+        res_tem_1 = temp
+        res_tem_2 = res_f
+
+        i++
+    }
+</script>

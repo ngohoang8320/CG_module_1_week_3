@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let i = 1
+    let fib_1 = 0
+    let fib_2 = 1
+    let res_tem_1 = 1
+    let res_tem_2 = 2
+    let temp = 0
+
+    let sum = fib_1 + fib_2 + res_tem_1 + res_tem_2
+    
+    while(i <= 16) {
+
+        let res_f = res_tem_1 + res_tem_2
+
+        sum += res_f
+
+        temp = res_tem_2
+        res_tem_1 = temp
+        res_tem_2 = res_f
+
+        i++
+    }
+    
+    document.getElementById('print').innerHTML += '<p>' + sum + '</p>'
+</script>
+

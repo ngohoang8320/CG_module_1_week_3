@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let ceil = 100
+    let count = 1
+    while(count <= 100) {
+        let mod_3 = count % 3
+        let mod_5 = count % 5
+        
+        if(mod_3 == 0) {
+            if(mod_5 ==0) {
+                document.getElementById('print').innerHTML += '<p>FizzBuzz</p>'
+            }
+            else {
+                document.getElementById('print').innerHTML += '<p>Fizz</p>'
+            }
+        }
+        else if(mod_5 == 0) {
+            document.getElementById('print').innerHTML += '<p>Buzz</p>'
+        }
+        else {
+            document.getElementById('print').innerHTML += '<p>' + count + '</p>'
+        }
+
+        count++
+    }
+</script>

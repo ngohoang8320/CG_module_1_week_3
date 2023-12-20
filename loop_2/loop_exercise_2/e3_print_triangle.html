@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print_1"></div>
+    <div id="print_2"></div>
+    <div id="print_3"></div>
+    <div id="print_4"></div>
+</body>
+</html>
+
+<script>
+    let text_1 = ''
+    for(let count = 1; count <= 5; count++) {
+        let star = count
+        while(star >= 1) {
+            text_1 += '<span>*</span>'
+            star --
+        }
+        text_1 += '<br>'
+    }
+    document.getElementById('print_1').innerHTML = text_1 + '<br>'
+
+    let text_2 = ''
+    for(let count = 5; count >= 1; count--) {
+        let star = count
+        while(star >= 1) {
+            text_2 += '<span>*</span>'
+            star--
+        }
+        text_2 += '<br>'
+    }
+    document.getElementById('print_2').innerHTML = text_2 + '<br>'
+
+    let text_3 = ''
+    for(let count = 5; count >= 1; count--) {
+        let blank = count - 1
+        for(i = blank; i > 0; i--) {
+            text_3 += '<span>&nbsp </span>'
+        }
+        let star = 5 - blank
+        for(star; star >= 1; star--) {
+            text_3 += '<span>*</span>'
+        }
+        text_3 += '<br>'
+        blank--
+    }
+    document.getElementById('print_3').innerHTML = text_3 + '<br>'
+ 
+    let text_4 = ''
+    for(let count_1 = 5; count_1 >= 1; count_1--) {
+
+        let star_1 = count_1
+        blank_1 = 5 - star_1
+
+        for(i = blank_1; i > 0; i--) {
+            text_4 += '<span>&nbsp </span>'
+        }
+
+        for(star_1; star_1 > 0; star_1--) {
+            text_4 += '<span>*</span>'
+        }
+        text_4 += '<br>'
+    }
+    document.getElementById('print_4').innerHTML = text_4 + '<br>'
+</script>
