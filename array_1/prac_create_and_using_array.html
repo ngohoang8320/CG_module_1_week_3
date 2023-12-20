@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span><input type="text" id="input"></span>
+    <span><input type="button" value="Add" id="add" onclick="add()"></span>
+    <span><input type="button" value="Display" id="display" onclick="display()"></span>
+    <hr>
+    <div id="print"></div>
+</body>
+</html>
+
+<script>
+    let element = []
+    
+
+    function add() {
+        let newE = document.getElementById('input')
+
+        if(newE !== '') {
+            element.push(newE.value)
+        }
+        newE.value = ''
+    }
+
+    function display() {
+        let count = 0
+        let len = element.length
+        let text =''
+        for(count; count < len; count++) {
+            text += '<p>Element ' + count + ' = ' + element[count] + '</p>'
+        }
+
+        document.getElementById('print').innerHTML = text
+    }
+
+</script>
