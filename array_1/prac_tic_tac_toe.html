@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="print"></div><br>
+    <button id="change" onclick="change()">Change</button>
+</body>
+
+</html>
+
+<script>
+    let board = []
+
+    for (let i = 0; i < 5; i++) {
+        board[i] = [0, 0, 0, 0, 0]
+    }
+
+    let print = ''
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            print += '<span>' + board[i][j] + '&nbsp&nbsp</span>'
+        }
+        print += '<br>'
+    }
+    document.getElementById('print').innerHTML = print
+
+    function change() {
+        let col = parseInt(prompt('Enter X:'))
+        let row = parseInt(prompt('Enter Y:'))
+
+        board[row - 1][col - 1] = 'X'
+
+        let print = ''
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                print += '<span>' + board[i][j] + '&nbsp&nbsp</span>'
+            }
+            print += '<br>'
+        }
+        document.getElementById('print').innerHTML = print
+    }
+
+</script>
