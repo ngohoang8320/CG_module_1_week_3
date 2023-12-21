@@ -56,6 +56,25 @@
 
         document.getElementById('print').innerHTML = print
 
+        check()
+
+    }
+
+    function check() {
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (board[i][j] == board[i][j + 1] && board[i][j] == board[i][j + 2]) {
+                    if (board[i][j] == 'X' || board[i][j] == 'O') {
+                        alert(board[i][j] + ' win.')
+                    }
+                }
+                if (board[i][j] == board[i + 1][j] && board[i][j] == board[i + 2][j]) {
+                    if (board[i][j] == 'X' || board[i][j] == 'O') {
+                        alert(board[i][j] + ' win.')
+                    }
+                }
+            }
+        }
     }
 
 </script>
