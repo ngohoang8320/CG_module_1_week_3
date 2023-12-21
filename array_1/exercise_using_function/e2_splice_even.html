@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp">
+    <button id="btn" onclick="convert()">Convert</button>
+    <p id="display"></p>
+</body>
+
+</html>
+
+<script>
+    function convert() {
+        let number = document.getElementById('inp').value
+
+        let result = [number[0]]
+
+        for (let i = 1; i < number.length; i++) {
+            if (number[i - 1] % 2 == 0 && number[i] % 2 == 0) {
+                result.push('-', number[i])
+            }
+            else {
+                result.push(number[i])
+            }
+        }
+
+        let text = ''
+        for (let i = 0; i < number.length; i++) {
+            text += result[i]
+        }
+        document.getElementById('display').innerHTML = text
+    }
+</script>
