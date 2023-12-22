@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="print">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let array = new Array()
+    // let array = []
+    let count = 0
+
+    for (let i = 0; i < 10; i++) {
+        let num = Math.floor(Math.random() * 20)
+        array[i] = num
+        if (num >= 10)
+            count++
+    }
+
+    document.getElementById('print').innerHTML = '<p>Mười phần tử trong mảng: ' + array + '</p>'
+    document.getElementById('print').innerHTML += '<p>Những số lớn hơn 10: ' + count + '</p>'
+
+
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    let array = new Array()
+
+    let num = parseInt(prompt('Enter the number:'))
+
+    for (let i = 0; i < num; i++) {
+        check = Math.floor(Math.random() * num)
+        if (!array.includes(check)) {
+            array[i] = check
+        }
+        else {
+            i--
+        }
+    }
+
+    document.getElementById('display').innerHTML = '<p>Mảng: ' + array + '</p>'
+
+    let max = array[0]
+    let index = 0
+    let sum = array[0]
+
+    for (let i = 1; i < num; i++) {
+        if (max < array[i]) {
+            max = array[i]
+        }
+
+        sum += array[i]
+    }
+
+    let average = sum / array.length
+
+    document.getElementById('display').innerHTML += '<p>Max: ' + max + '</p>'
+    document.getElementById('display').innerHTML += '<p>Average: ' + average + '</p>'
+
+</script>

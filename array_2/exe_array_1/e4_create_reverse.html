@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+<script>
+    let num = parseInt(prompt('How many element the array would have?'))
+
+    let array = new Array()
+
+    for (let i = 0; i < num; i++) {
+        let setNum = prompt('Enter the data at index ' + i + ': ')
+        array[i] = setNum
+    }
+
+    let newArray = []
+
+    for (let i = 0; i < num; i++) {
+        let old = num - 1 - i
+        newArray[i] = array[old]
+    }
+
+    document.getElementById('display').innerHTML = '<p>Array: ' + array + '</p>'
+    document.getElementById('display').innerHTML += '<p>New Array: ' + newArray + '</p>'
+
+</script>

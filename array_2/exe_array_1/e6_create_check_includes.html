@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <br>
+    <button onclick="checkf()">Check</button>
+</body>
+
+</html>
+
+<script>
+    let array = new Array()
+
+    for (let i = 0; i < 10; i++) {
+        check = Math.floor(Math.random() * 20)
+        if (!array.includes(check)) {
+            array[i] = check
+        }
+        else {
+            i--
+        }
+    }
+
+    document.getElementById('display').innerHTML = array
+
+    function checkf() {
+        let v = parseIn(prompt('Enter a number to check:'))
+
+        if (array.includes(v)) {
+            alert('V is in the array.')
+        }
+        else {
+            alert('V is NOT in the array.')
+        }
+    }
+</script>

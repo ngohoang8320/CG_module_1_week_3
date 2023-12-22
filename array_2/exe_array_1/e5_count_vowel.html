@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    let text = prompt('Enter a string:')
+    let len = text.length
+
+    let vowel = 'aiueoAIUEO'
+
+    let count = 0
+
+    for (let i = 0; i < len; i++) {
+        if (vowel.includes(text[i])) {
+            count++
+        }
+    }
+
+    document.getElementById('display').innerHTML = '<p>Your string: ' + text
+    document.getElementById('display').innerHTML += '<p>Your string have ' + count + ' vowel.</p>'
+
+</script>

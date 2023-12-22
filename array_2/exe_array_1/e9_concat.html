@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <br>
+    <button onclick="concatf()">Concat</button>
+</body>
+
+</html>
+
+<script>
+    let a = new Array()
+    let b = new Array()
+
+    for (let i = 0; i < 10; i++) {
+        check = Math.floor(Math.random() * 20)
+        if (!a.includes(check)) {
+            a[i] = check
+        }
+        else {
+            i--
+        }
+    }
+
+    for (let i = 0; i < 10; i++) {
+        check = Math.floor(Math.random() * 20)
+        if (!b.includes(check)) {
+            b[i] = check
+        }
+        else {
+            i--
+        }
+    }
+
+    document.getElementById('display').innerHTML = '<p>Mảng a: [' + a + ']</p>'
+    document.getElementById('display').innerHTML += '<p>Mảng b: [' + b + ']</p>'
+
+    function concatf() {
+
+        let len_ab = a.length
+
+        let mid_c = len_ab
+
+
+
+        let c = []
+
+        for (let i = 0; i < len_ab; i++) {
+            c[i] = a[i]
+            c[mid_c] = b[i]
+            mid_c++
+        }
+
+        document.getElementById('display').innerHTML += '<p>Mảng c: [' + c + ']</p>'
+
+
+    }
+</script>
