@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="find()">Find</button>
+    <p id="result"></p>
+</body>
+
+</html>
+
+<script>
+    let eng = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+    let vie = ['Số một', 'Số hai', 'Số ba', 'Số bốn', 'Số năm', 'Số sáu', 'Số bảy', 'Số tám', 'Số chín', 'Số mười']
+
+    function find() {
+        let value = document.getElementById('input').value
+        let i = 0
+
+        for (i; i < eng.length; i++) {
+            if (value.trim() == eng[i]) { //Bỏ space
+                document.getElementById('result').innerHTML = value + ' có nghĩa là  ' + vie[i] + '.'
+                break
+            }
+        }
+
+        if (i == eng.length) {
+            document.getElementById('result').innerHTML = 'Trong từ điển không có từ này.'
+        }
+    }
+
+</script>

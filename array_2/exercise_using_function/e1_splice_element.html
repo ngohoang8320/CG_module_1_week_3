@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let myColor = ["Red", "Green", "White", "Black"]
+
+    let len = myColor.length - 1
+
+    let spliced = ''
+
+    for (let i = 0; i <= len; i++) {
+        spliced += myColor[i]
+        if (i < len) {
+            spliced += ', '
+        }
+    }
+    document.write(spliced)
+</script>

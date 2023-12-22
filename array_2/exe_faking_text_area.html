@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Typing slowly.</h2>
+    <br>
+    <textarea id="type" cols="30" rows="10" placeholder="Type your GF's name." onkeypress="print()"></textarea>
+</body>
+
+</html>
+
+<script>
+    let def_text = 'No, you are alone 😀.'
+    let len = def_text.length
+
+    let text = ''
+
+    function print() {
+        let display = document.getElementById('type')
+
+        let len_d = display.value.length
+
+        if (len_d > 0) {
+            let i = 0
+            for (i; i < len_d; i++) {
+                text += def_text[i]
+            }
+            if (i >= len + 1) {
+                text = ''
+            }
+        }
+        display.value = text
+        text = ''
+
+        /* setTimeout(print, 1000) */ //Đây là cách hay truyền, chỉ truyền tên hàm.
+        setTimeout(function () { //Cách này có thể truyền tham số nếu cần
+            print()
+        }, 10);
+    }
+</script>
