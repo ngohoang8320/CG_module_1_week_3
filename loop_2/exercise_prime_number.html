@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body onload="printf()">
     <div id="print"></div>
 </body>
+
 </html>
 
 <script>
-    function printf() {
+    /* function printf() {
         let number = parseInt(prompt('Enter how many prime number would you like to print:'))
         
         let print = document.getElementById('print')
@@ -51,5 +54,22 @@
             }
 
         }
+    } */
+
+    let number = parseInt(prompt('Enter how many prime number would you want:'))
+    let check = 2
+
+    let time = 1
+
+    while (time <= number) {
+        for (let i = 2; i < check; i++) {
+            if (check % i == 0) {
+                check++
+                continue
+            }
+        }
+        document.getElementById('print').innerHTML += '<p>' + check + '</p>'
+        check++
+        time++
     }
 </script>
