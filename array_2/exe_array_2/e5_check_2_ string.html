@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    let a = 'kiểm tra xem hai chuỗi có giống nhau hay không'
+    let b = 'kiểm tra xem hai chuỗi có giống nhau hay không'
+
+    a = a.split(' ')
+    b = b.split(' ')
+
+    console.log(a[9])
+    console.log(a[9] == b[9])
+
+
+    let len_a = a.length
+    let len_b = b.length
+
+    let display = document.getElementById('display')
+
+    if (len_a != len_b) {
+        display.innerHTML = 'Hai chuỗi KHÔNG giống nhau.'
+    }
+    else {
+        let i = 0
+        for (i; i < len_a; i++) {
+            if (a[i] != b[i]) {
+                display.innerHTML = 'Hai chuỗi KHÔNG giống nhau.'
+                break
+            }
+            else {
+                display.innerHTML = 'Hai chuỗi giống nhau.'
+            }
+        }
+    }
+</script>

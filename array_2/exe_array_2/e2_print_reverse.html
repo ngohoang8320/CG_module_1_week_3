@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    let a = ['c', 's', 'c', '2', '6', '1']
+
+    let display = document.getElementById('display')
+
+    display.innerHTML = 'Array a:    ' + a + '<br>'
+
+    /* let b = []
+
+    let len = a.length
+
+    let run_b = len - 1
+
+    for (let i = 0; i < len; i++) {
+        b[run_b] = a[i]
+        run_b--
+    } */
+
+    let b = a.reverse()
+
+    display.innerHTML += 'Display b:    ' + b.join('')
+
+</script>

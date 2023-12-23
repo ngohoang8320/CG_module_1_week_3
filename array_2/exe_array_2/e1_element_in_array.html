@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ]
+    let r = 0
+    document.getElementById('display').innerHTML = ''
+
+    for (let i = 0; i < 5; i++) {
+        document.getElementById('display').innerHTML += '"row ' + r + '"<br>'
+        for (let j = 0; j < 4; j++) {
+            document.getElementById('display').innerHTML += '" ' + a[i][j] + '"<br>'
+        }
+        r++
+
+    }
+
+</script>

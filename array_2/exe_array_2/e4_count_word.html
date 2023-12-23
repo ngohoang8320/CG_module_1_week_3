@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    let a = 'Viết một chương trình để đếm số từ trong một chuỗi'
+
+    a = a.split(' ')
+    // b = Array.from(a)
+    // c = Array.from('Viết một chương trình để đếm số từ trong một chuỗi')
+    // d = [...a]
+
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // console.log(d)
+
+    let len = a.length
+
+    document.getElementById('display').innerHTML = 'Chuỗi: ' + a.join(' ') + '<br>'
+    document.getElementById('display').innerHTML += 'Chuỗi có ' + len + ' từ.'
+
+</script>

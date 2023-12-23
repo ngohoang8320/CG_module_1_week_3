@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script>
+    // let a = ['c', 's', 'c', '2', '6', '1', 'f', '4', 'h', 'j', '8']
+
+    let a = 'ncuqwhbc7812gbc23786y24095nvc98y123gbc7861h02bx892'
+
+    a = [...a]
+
+    let len = a.length
+
+    let num_count = 0
+
+    a.forEach(count)
+
+    function count(element, index) {
+        let check = parseInt(element)
+        if (!isNaN(check)) {
+            num_count++
+        }
+    }
+
+    let display = document.getElementById('display')
+
+    display.innerHTML = a + '<br>'
+
+    display.innerHTML += 'Array have ' + num_count + ' element is number symbol.'
+
+</script>

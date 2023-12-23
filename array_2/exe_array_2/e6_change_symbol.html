@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+
+</html>
+<script>
+    let a = 'ascjbb1i24-1bnd10jx01-122 nc0-1=-'
+
+    document.getElementById('display').innerHTML = a + '<br>'
+
+    a = a.split('')
+
+    a.forEach(change)
+
+    function change(element, index) {
+        if (element == '-') {
+            a[index] = '_'
+        }
+    }
+    document.getElementById('display').innerHTML += a.join('')
+</script>
