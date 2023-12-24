@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+    function checkf(name) {
+        for (let i = 0; i < array1.length; i++) {
+            if (name == array1[i]) {
+                return i
+                break
+            }
+        }
+        return -1
+    }
+
+    let sName = prompt("Enter the star's name:")
+
+    let sign = checkf(sName.trim())
+
+    if (sign == -1) {
+        document.write("Can't find the star.")
+    }
+    else {
+        document.write(array2[sign])
+    }
+</script>
