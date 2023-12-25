@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    function checkSymbol(symbol, array) {
+        let same = array.filter(function (inArray) {
+            return inArray === symbol
+        })
+        return same
+    }
+
+    let a = 'Kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.'
+
+    a = [...a]
+
+    let check = prompt('Enter a symbol:')
+
+    let newArray = checkSymbol(check, a)
+
+    let count = newArray.length
+
+    document.write('Array: ' + a)
+
+    document.write('<br>The symbol you wanna check: ' + check)
+
+    document.write('<br>Array have ' + count + ' symbol ' + check + '.')
+
+
+</script>

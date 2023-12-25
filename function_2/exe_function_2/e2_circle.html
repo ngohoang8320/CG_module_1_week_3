@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let r = parseFloat(prompt('Enter radius: '))
+
+    function area(radius) {
+        let area = Math.PI * radius * radius
+        return area
+    }
+
+    function perimeter(radius) {
+        let perimeter = Math.PI * radius * 2
+        return perimeter
+    }
+
+    let a = area(r)
+    let p = perimeter(r)
+
+    document.write('Area: ' + a)
+    document.write('<br>Perimeter: ' + p)
+</script>

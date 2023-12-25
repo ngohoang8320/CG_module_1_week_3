@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let a = parseInt(prompt('Enter a:'))
+    let b = parseInt(prompt('Enter b:'))
+
+    function swapIntegers(n1, n2) {
+        let temp = n1;
+        n1 = n2;
+        n2 = temp;
+        return [n1, n2];
+    }
+
+    document.write("Before: a = ", a, " b = ", b); //can use the , to join them
+
+    [a, b] = swapIntegers(a, b);
+    document.write("<br>After: a = " + a + " b = ", b);
+</script>

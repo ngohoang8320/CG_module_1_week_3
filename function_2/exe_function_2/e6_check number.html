@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let num = parseFloat(prompt('Enter the number: '))
+
+    function checkf(number) {
+        let result = true
+
+        if (number < 0) {
+            result = false
+        }
+        else {
+            if (Math.floor(number) != number) {
+                result = false
+            }
+        }
+
+        return result
+    }
+
+    let re = checkf(num)
+
+    document.write(re)
+
+</script>

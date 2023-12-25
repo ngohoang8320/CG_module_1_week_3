@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let a = '0123456789'
+
+    a = [...a]
+
+    function reverse(array) {
+        let len = array.length / 2
+
+        let rev = array.length - 1
+        for (let i = 0; i < len; i++) {
+
+            let temp = array[i]
+            array[i] = array[rev - i]
+            array[rev - i] = temp
+        }
+        return array
+    }
+
+    document.write('BF :' + a)
+
+    a = reverse(a)
+    document.write('<br>AT :' + a)
+
+</script>
