@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #input-container {
+            background-color: #f2f2f2;
+            width: 60%;
+            height: 75px;
+            text-align: center;
+            padding-top: 25px;
+            border-radius: 20px;
+        }
+
+        button {
+            background-color: rgb(0, 200, 0);
+            width: 80px;
+            height: 35px;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            padding-left: 15px;
+        }
+
+        #container {
+            width: 800px;
+        }
+
+        input {
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            width: 30%;
+            border: none;
+        }
+
+        tr+tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        #number_product {
+            text-align: right;
+            color: rgb(220, 55, 55);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Add New Product</h2>
+        <div id="input-container">
+            <input type="text" id="input" placeholder="New Product">
+            <button onclick="AddProductToList()">Add</button>
+        </div>
+
+        <div id="form_display">
+            <h3>Display All Product</h3>
+            <table id="table">
+                <tr>
+                    <th>Product Name</th>
+                    <th></th>
+                    <th id="number_product"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let product_list = []
+
+
+    function AddProductToList() {
+        let input = document.getElementById('input')
+        product_list.push('<tr><td>' + input.value + '</td><td><button onclick="EditProduct(this.value)" value=' + input.value + '>Edit</button></td><td><button onclick="RemoveProduct(this.value)" value=' + input.value + '>Delete</button></td></tr>')
+
+        Display()
+    }
+
+    function RemoveProduct(value) {
+        for (let i = 0; i < product_list.length; i++) {
+            if (product_list[i].includes(value)) {
+                product_list.splice(i, 1)
+                break
+            }
+        }
+        Display()
+    }
+
+    function Display() {
+        let len = product_list.length
+        let table_present = document.getElementById('table')
+        let text = '<tr><th>Product Name</th><th></th><th id="number_product">' + len + ' product.' + '</th></tr>'
+
+
+        for (let i = 0; i < len; i++) {
+            text += product_list[i]
+        }
+
+        table_present.innerHTML = text
+        text = ''
+    }
+
+    function EditProduct(value) {
+        for (let i = 0; i < product_list.length; i++) {
+            if (product_list[i].includes(value)) {
+                let change = prompt('Enter the new value:')
+
+                product_list.splice(i, 1, '<tr><td>' + change + '</td><td><button onclick="EditProduct(this.value)">Edit</button></td><td><button onclick="RemoveProduct(this.value)" value=' + change + '>Delete</button></td></tr>')
+                break
+            }
+        }
+
+        Display()
+    }
+
+
+</script>
